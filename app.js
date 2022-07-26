@@ -1,9 +1,6 @@
 let contSqr = document.querySelector(".cont-sqr");
 let sizeBtn = document.querySelector(".resizeBtn");
 
-// contSqr.addEventListener("mouseover", function(event) {
-//     event.target.style.backgroundColor = "black";
-// }, false )
 
 function createDefaultGrid(){
 
@@ -15,6 +12,7 @@ function createDefaultGrid(){
     
             tempsqr.setAttribute("class", "sqr");
 
+            //needs changes
             tempsqr.addEventListener("mouseover", function(event) {
                 event.target.style.backgroundColor = "black";
             }, false )
