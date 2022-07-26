@@ -11,6 +11,7 @@ function createDefaultGrid(){
             tempsqr.setAttribute("class", "sqr");
 
             tempsqr.addEventListener("mouseover", function(event) {
+                
                 event.target.style.backgroundColor = "black";
             }, false )
             
