@@ -28,7 +28,19 @@ function setSize() {
         contSqr.removeChild(contSqr.firstChild);
     }
 
-    let size = prompt("Enter a number:");
+
+    let bool = false;
+    let size;
+
+    while (!bool){
+        size = prompt("Enter a number:");
+
+        let num = parseInt(size);
+
+        if (num <= 100 && num > 0)
+            bool = true;
+    }
+
     newGrid(size);
 }   
 
