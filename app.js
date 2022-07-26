@@ -17,7 +17,6 @@ function createDefaultGrid(){
             tempsqr.setAttribute("class", "sqr");
 
             tempsqr.addEventListener("mouseover", function(event) {
-                
                 event.target.style.backgroundColor = "red";
             }, false )
             
@@ -54,18 +53,19 @@ function setSize() {
     // homeCont.appendChild(div);
 
 
-}
-
-String.prototype.replaceAt = function(index, replacement) {
-    return this.substring(0, index) + replacement + this.substring(index + replacement.length);
-}
+}   
 
 function newGrid(size){
 
-    
+    let temp = "repeat(";
+    temp += (size + ",1fr)");
 
-    contSqr.style.gridTemplateRows = "repeat(6, 1fr)";
-    contSqr.style.gridTemplateColumns = "repeat(6, 1fr)";
+    console.log("temp is "+ temp);
+
+    if (contSqr instanceof HTMLElement){
+        contSqr.style.gridTemplateRows = temp;
+        contSqr.style.gridTemplateColumns = temp;
+    }
 
 
     for (let i = 0; i < size; i++){
