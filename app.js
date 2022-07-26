@@ -1,5 +1,5 @@
 let contSqr = document.querySelector(".cont-sqr");
-let sizeBtn = document.querySelector(".size");
+let sizeBtn = document.querySelector(".resizeBtn");
 
 function createDefaultGrid(){
 
