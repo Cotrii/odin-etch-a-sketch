@@ -30,24 +30,28 @@ function createDefaultGrid(){
 
 }
 
-let div = document.createElement('div');
+let div = contSqr;
 let row = 5;
 let col = 5;
 
 function setSize() {
 
-    homeCont.removeChild(contSqr);
+    while (contSqr.firstChild) {
+        contSqr.removeChild(contSqr.firstChild);
+    }
 
-    // let size = prompt("Enter a number:");
+    // homeCont.removeChild(contSqr);
 
-    console.log(size);
+    // // let size = prompt("Enter a number:");
 
-    // row = 1;
-    // col = 1;
+    // // console.log(size);
+
+    // // row = 1;
+    // // col = 1;
 
     newGrid();
 
-    homeCont.appendChild(div);
+    // homeCont.appendChild(div);
 
 
 }
@@ -57,8 +61,8 @@ function newGrid(){
     console.log("hello");
     let count = 0;
 
-    for (let i = 0; i < 16; i++){
-        for (let j = 0; j < 16; j++){
+    for (let i = 0; i < 5; i++){
+        for (let j = 0; j < 5; j++){
             // console.log("*");
 
             let tempsqr = document.createElement('div');   
