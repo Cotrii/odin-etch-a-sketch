@@ -42,27 +42,34 @@ function setSize() {
 
     // homeCont.removeChild(contSqr);
 
-    // // let size = prompt("Enter a number:");
+    let size = prompt("Enter a number:");
 
     // // console.log(size);
 
     // // row = 1;
     // // col = 1;
 
-    newGrid();
+    newGrid(size);
 
     // homeCont.appendChild(div);
 
 
 }
 
-function newGrid(){
+String.prototype.replaceAt = function(index, replacement) {
+    return this.substring(0, index) + replacement + this.substring(index + replacement.length);
+}
 
-    console.log("hello");
-    let count = 0;
+function newGrid(size){
 
-    for (let i = 0; i < 5; i++){
-        for (let j = 0; j < 5; j++){
+    
+
+    contSqr.style.gridTemplateRows = "repeat(6, 1fr)";
+    contSqr.style.gridTemplateColumns = "repeat(6, 1fr)";
+
+
+    for (let i = 0; i < size; i++){
+        for (let j = 0; j < size; j++){
             // console.log("*");
 
             let tempsqr = document.createElement('div');   
@@ -73,15 +80,12 @@ function newGrid(){
 
             tempsqr.addEventListener("mouseenter", function(event) {
                 
-                event.target.style.backgroundColor = "red";
+                event.target.style.backgroundColor = "black";
             }, false )
             
             div.appendChild(tempsqr);  
-            
-            count++;
+        
         }
-
-        console.log("count is" + count);
 
     }
 
