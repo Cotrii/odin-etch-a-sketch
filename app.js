@@ -1,6 +1,8 @@
 let contSqr = document.querySelector(".cont-sqr");
 let sizeBtn = document.querySelector(".resizeBtn");
 
+let click = false;
+
 
 function createDefaultGrid(){
 
@@ -14,7 +16,8 @@ function createDefaultGrid(){
 
             //needs changes
             tempsqr.addEventListener("mouseover", function(event) {
-                event.target.style.backgroundColor = "black";
+                if (click)
+                    event.target.style.backgroundColor = "black";
             }, false )
             
             contSqr.appendChild(tempsqr);            
@@ -65,7 +68,8 @@ function newGrid(size){
             tempsqr.setAttribute("class", "sqr");
             tempsqr.setAttribute("background-color", "white");
             tempsqr.addEventListener("mouseenter", function(event) {
-                event.target.style.backgroundColor = "black";
+                if (click)
+                    event.target.style.backgroundColor = "black";
             }, false )
             
             contSqr.appendChild(tempsqr);  
@@ -75,5 +79,10 @@ function newGrid(size){
 }
 
 
-
 createDefaultGrid();
+
+document.querySelector(".cont-sqr").addEventListener("click", (e) => {
+    click = !click;    
+
+    e.target.style.backgroundColor = "black";
+});
