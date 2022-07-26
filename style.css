@@ -14,7 +14,7 @@ body {
     border: 1px solid black;
 }
 
-.cont {
+.cont-sqr {
     /* display: flex;
     flex-wrap: wrap; */
 
@@ -29,5 +29,15 @@ body {
 
     border: 1px solid green;
     margin: 10px;
+}
+
+.btnCont {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
 }
 
